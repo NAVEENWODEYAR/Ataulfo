@@ -1,2 +1,5 @@
 server:
   port: 9012
+spring:
+  main:
+    web-application-type: none

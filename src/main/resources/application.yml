@@ -1,3 +1,6 @@
+#spring.main.web-application-type=none,  Disabling the Web Server
+
 spring:
   profiles:
     active: dev
+  
