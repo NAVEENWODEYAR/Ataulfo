@@ -1,5 +1,7 @@
 package com.ataulfo.modal;
 
+import com.ataulfo.dto.EmployeeDTO;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
@@ -20,4 +22,13 @@ public class Employee
 	private String empMail;
 	private double empSalary;
 	private String empPhone;
+	
+	public Employee(EmployeeDTO employeeDTO)
+	{
+		this.empName = employeeDTO.getEmpName();
+		this.empMail = employeeDTO.getEmpMail();
+		this.empSalary = employeeDTO.getEmpSalary();
+		this.empPhone = employeeDTO.getEmpPhone();
+		
+	}
 }
