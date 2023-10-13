@@ -9,8 +9,8 @@ spring:
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
     url: jdbc:mysql://localhost:3306/ataulfo?createDatabaseIfNotExist=true
-    username: 
-    password: 
+    username: root
+    password: boss
   jpa:
     show-sql: true
     hibernate:
