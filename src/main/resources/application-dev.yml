@@ -8,12 +8,12 @@ spring:
     name: Ataulfo 
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/ataulfo?createDatabaseIfNotExist=true
+    url: jdbc:mysql://localhost:3306/ataulfodb?createDatabaseIfNotExist=true
     username: root
     password: boss
   jpa:
     show-sql: true
     hibernate:
-      ddl-auto: update
+      ddl-auto: create-drop
   
   
