@@ -34,8 +34,8 @@
 		
 		<!-- https://mvnrepository.com/artifact/org.eclipse.jetty/jetty-server 
 		<dependency>
-		    <groupId>org.eclipse.jetty</groupId>
-		    <artifactId>jetty-server</artifactId>
+		    <groupId>org.springframework.boot</groupId>
+		    <artifactId>spring-boot-starter-jetty</artifactId>
 		</dependency>
 		-->
 		<!-- https://mvnrepository.com/artifact/org.eclipse.undertow/undertow-server -->
