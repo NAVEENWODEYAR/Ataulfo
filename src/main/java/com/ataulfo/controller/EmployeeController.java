@@ -1,8 +1,11 @@
 package com.ataulfo.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -27,6 +30,15 @@ public class EmployeeController
 		Employee employee = employeeService.insertEmployee(employeeDTO);
 		RequestDTO requestDTO = new RequestDTO("Data inserted successfully,",employee);
 		return new ResponseEntity<>(requestDTO,HttpStatus.CREATED);
+	}
+	
+	// 2. receive from the database,
+	@GetMapping("/getEmployees")
+	public ResponseEntity<RequestDTO> getEmployees()
+	{
+		List<Employee> emp = employeeService.getEmployees();
+		RequestDTO requestDTO = new RequestDTO("Employees available in the list,", emp);
+		return new ResponseEntity<>(requestDTO,HttpStatus.FOUND);
 	}
 	
 }

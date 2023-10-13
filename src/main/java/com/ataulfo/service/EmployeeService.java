@@ -1,11 +1,14 @@
 package com.ataulfo.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.ataulfo.dto.EmployeeDTO;
 import com.ataulfo.modal.Employee;
 import com.ataulfo.repo.EmployeeRepo;
+
 
 @Service
 public class EmployeeService 
@@ -20,5 +23,11 @@ public class EmployeeService
 	{
 		Employee employee = new Employee(employeeDTO);
 		return employeeRepo.save(employee);
+	}
+	
+	// 2. SELECT * FROM TABLENAME;
+	public List<Employee> getEmployees()
+	{
+		return employeeRepo.findAll();
 	}
 }
