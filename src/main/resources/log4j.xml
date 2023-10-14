@@ -5,12 +5,17 @@
 			<PatternLayout>
 				<Pattern>%d - %C[%M] -(%p) - %m  %n </Pattern>
 			</PatternLayout>
-			
 		</Console>
+		<File name="LogToFile" filename="logs/logs.log">
+			<PatternLayout>
+				<Pattern>%d - %C[%M] -(%p) - %m  %n </Pattern>
+			</PatternLayout>
+		</File>
 	</Appender>
 	<Loggers>
-		<Root>
-			<AppenderRef ref ="LogToConsole" />
+		<Root level="trace">
+			<AppenderRef ref="LogToConsole" />
+			<AppenderRef ref="LogToFile" />
 		</Root>
 	</Loggers>
-</Configuration>
+</Configuration> 
