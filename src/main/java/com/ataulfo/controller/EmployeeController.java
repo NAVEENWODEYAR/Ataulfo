@@ -28,6 +28,16 @@ public class EmployeeController
 	// Logger 
 	private static final Logger log = LogManager.getLogger(EmployeeController.class);
 	
+	public void testLogger()
+	{
+		log.trace("For multiple environments");
+		log.debug("for debuging");
+		log.info("for message");
+		log.error("for exceptions");
+		log.warn("for system warnings");
+		log.fatal("for fatal messages");
+	}
+	
 	// 1. send data to the db,
 	@PostMapping("/insertEmployee")
 	public ResponseEntity<RequestDTO> insertEmployee(EmployeeDTO employeeDTO)
