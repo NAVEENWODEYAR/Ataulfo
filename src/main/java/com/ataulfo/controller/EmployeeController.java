@@ -42,6 +42,13 @@ public class EmployeeController
 	@PostMapping("/insertEmployee")
 	public ResponseEntity<RequestDTO> insertEmployee(EmployeeDTO employeeDTO)
 	{
+		log.trace("For multiple environments");
+		log.debug("for debuging");
+		log.info("for message");
+		log.error("for exceptions");
+		log.warn("for system warnings");
+		log.fatal("for fatal messages");
+		
 		Employee employee = employeeService.insertEmployee(employeeDTO);
 		RequestDTO requestDTO = new RequestDTO("Data inserted successfully,",employee);
 		return new ResponseEntity<>(requestDTO,HttpStatus.CREATED);
