@@ -3,7 +3,7 @@
 	<Appender >
 		<Console name="LogToConsole" target="SYSTEM_OUT">
 			<PatternLayout>
-				<Pattern>%d - %C[%M] -(%p) - %m - %n </Pattern>
+				<Pattern>%d - %C[%M] -(%p) - %m  %n </Pattern>
 			</PatternLayout>
 			
 		</Console>
