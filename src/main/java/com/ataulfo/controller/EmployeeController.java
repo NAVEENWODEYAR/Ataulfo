@@ -2,6 +2,8 @@ package com.ataulfo.controller;
 
 import java.util.List;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -22,6 +24,9 @@ public class EmployeeController
 	// CConstructor Dependency injection,
 	@Autowired
 	private EmployeeService employeeService;
+	
+	// Logger 
+	private static final Logger log = LogManager.getLogger(EmployeeController.class);
 	
 	// 1. send data to the db,
 	@PostMapping("/insertEmployee")
