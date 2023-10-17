@@ -17,6 +17,7 @@ import com.ataulfo.dto.RequestDTO;
 import com.ataulfo.modal.Employee;
 import com.ataulfo.service.EmployeeService;
 
+
 @RestController
 @RequestMapping("/employee")
 public class EmployeeController 
@@ -24,6 +25,8 @@ public class EmployeeController
 	// CConstructor Dependency injection,
 	@Autowired
 	private EmployeeService employeeService;
+	
+	
 	
 	// Logger 
 	private static final Logger log = LogManager.getLogger(EmployeeController.class);
