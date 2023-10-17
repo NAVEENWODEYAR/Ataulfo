@@ -7,10 +7,10 @@ spring:
   application:
     name: Ataulfo 
   datasource:
-    driver-class-name: com.mysql.jdbc.Driver
+    driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/ataulfodb?createDatabaseIfNotExist=true
-    username: root
-    password: boss
+    username: $DbName
+    password: $Password
   jpa:
     show-sql: true
     hibernate:
