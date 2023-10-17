@@ -26,8 +26,6 @@ public class EmployeeController
 	@Autowired
 	private EmployeeService employeeService;
 	
-	
-	
 	// Logger 
 	private static final Logger log = LogManager.getLogger(EmployeeController.class);
 	
