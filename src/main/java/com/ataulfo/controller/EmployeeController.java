@@ -22,11 +22,11 @@ import com.ataulfo.service.EmployeeService;
 @RequestMapping("/employee")
 public class EmployeeController 
 {
-	// CConstructor Dependency injection,
+	// Constructor Dependency injection,
 	@Autowired
 	private EmployeeService employeeService;
 	
-	// Logger 
+	// Logger object.,
 	private static final Logger log = LogManager.getLogger(EmployeeController.class);
 	
 	// 1. send data to the db,
