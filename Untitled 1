@@ -1,4 +1,4 @@
-			Logging
+			Logging.,
  3 Components,
  a. Logger (which classes)
  b. Appender(Where to store)
