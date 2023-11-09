@@ -10,8 +10,8 @@ spring:
     name: Ataulfo 
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/ataulfodb
-#    url: jdbc:mysql://localhost:3306/ataulfodb?createDatabaseIfNotExist=true
+#    url: jdbc:mysql://localhost:3306/ataulfodb
+    url: jdbc:mysql://localhost:3306/vasudb?createDatabaseIfNotExist=true
     username: ${DbName}
     password: ${Password}
   jpa:
