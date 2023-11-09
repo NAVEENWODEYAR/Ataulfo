@@ -1,4 +1,4 @@
-# PILOT: pre-production Environment.,
+# PILOT: pre-production Environment before the production,
 
 server:
   port: 9012
