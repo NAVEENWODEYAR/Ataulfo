@@ -10,7 +10,7 @@ public class AtaulfoApplication
 	public static void main(String[] args) 
 	{
 		SpringApplication.run(AtaulfoApplication.class, args);
-		System.out.println("\n  'Ataúlfo' mango is a mango cultivar from Mexico");
+		System.out.println("\n  'Ataúlfo' is a mango cultivar from Mexico.,");
 	}
 
 }
