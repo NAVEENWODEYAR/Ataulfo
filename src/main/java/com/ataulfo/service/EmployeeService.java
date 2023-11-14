@@ -42,10 +42,13 @@ public class EmployeeService
 	public Employee updateEmployee(@PathVariable int empId, @RequestBody Employee emp)
 	{
 		Employee e = employeeRepo.findById(empId).get();
-					e.getEmpMail(emp.setEmpMail(""));
-					e.getEmpName(emp.setEmpName(""));
-					e.getEmpPhone(emp.setEmpPhone());
-					e.getEmpSalary(emp.setEmpSalary());
+					e.setEmpMail(emp.getEmpMail());
+					e.setEmpName(emp.getEmpName());
+					e.setEmpPhone(emp.getEmpPhone());
+					e.setEmpSalary(emp.getEmpSalary());
+					return employeeRepo.save(e);
+					
+					
 					;
 	}
 }
