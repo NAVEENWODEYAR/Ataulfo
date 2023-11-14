@@ -29,4 +29,10 @@ public class EmployeeService
 	{
 		return employeeRepo.findAll();
 	}
+	
+	// 3. SELECT * FROM TABLENAME WHERE ID = " ";
+	public Employee getEmployeeById(int empId)
+	{
+		return employeeRepo.findById(empId).get();
+	}
 }
