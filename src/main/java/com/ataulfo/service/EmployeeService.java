@@ -39,7 +39,7 @@ public class EmployeeService
 	}
 	
 	// 4. UPDATE TABLENAME SET email = '' 	WHERE id = '';  
-	public Employee updateEmployee(@PathVariable int empId, @RequestBody Employee emp)
+	public Employee updateEmployee(int empId,Employee emp)
 	{
 		Employee e = employeeRepo.findById(empId).get();
 					e.setEmpMail(emp.getEmpMail());
@@ -47,8 +47,6 @@ public class EmployeeService
 					e.setEmpPhone(emp.getEmpPhone());
 					e.setEmpSalary(emp.getEmpSalary());
 					return employeeRepo.save(e);
-					
-					
-					;
+										
 	}
 }

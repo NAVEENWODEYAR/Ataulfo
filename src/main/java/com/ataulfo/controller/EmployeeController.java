@@ -11,6 +11,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -66,4 +68,18 @@ public class EmployeeController
 		return new ResponseEntity<RequestDTO>(requestDTO,HttpStatus.FOUND);
 	}
 	
+	// 4. updateById.,
+	@PutMapping("/empUpdate/{empId}")
+	public Employee updateById(@PathVariable int empId, @RequestBody Employee emp)
+	{
+		Employee e1 = employeeService.getEmployeeById(empId);
+					e1.setEmpMail(emp.getEmpMail());
+					e1.setEmpName(emp.getEmpMail());
+					e1.setEmpPhone(emp.getEmpPhone());
+					e1.setEmpSalary(emp.getEmpSalary());
+					
+					return employeeService.updateEmployee(empId, emp);
+					
+					
+	}
 }
