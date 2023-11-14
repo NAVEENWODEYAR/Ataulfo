@@ -6,8 +6,10 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -15,6 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.ataulfo.dto.EmployeeDTO;
 import com.ataulfo.dto.RequestDTO;
 import com.ataulfo.modal.Employee;
+import com.ataulfo.repo.EmployeeRepo;
 import com.ataulfo.service.EmployeeService;
 
 
@@ -52,6 +55,15 @@ public class EmployeeController
 		List<Employee> emp = employeeService.getEmployees();
 		RequestDTO requestDTO = new RequestDTO("Employees available in the list,", emp);
 		return new ResponseEntity<>(requestDTO,HttpStatus.FOUND);
+	}
+	
+	// 3.findById
+	@GetMapping("/getEmp/{empId}")
+	public ResponseEntity<RequestDTO> getEmpById(@PathVariable int empId)
+	{
+		Employee emp = employeeService.getEmployeeById(empId);
+		RequestDTO requestDTO = new RequestDTO("Employee found", emp);
+		return new ResponseEntity<RequestDTO>(requestDTO,HttpStatus.FOUND);
 	}
 	
 }
