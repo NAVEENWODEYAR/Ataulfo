@@ -79,7 +79,6 @@ public class EmployeeController
 					e1.setEmpSalary(emp.getEmpSalary());
 					
 					return employeeService.updateEmployee(empId, emp);
-					
-					
+							
 	}
 }

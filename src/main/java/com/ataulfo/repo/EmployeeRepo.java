@@ -6,6 +6,6 @@ import com.ataulfo.modal.Employee;
 
 public interface EmployeeRepo extends JpaRepository<Employee, Integer> 
 {
-	@Query(value = "",nativeQuery = true)
-	public void getEmp();
+//	@Query(value = "",nativeQuery = true)
+//	public void getEmp();
 }
