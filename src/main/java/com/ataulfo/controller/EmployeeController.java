@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.ataulfo.dto.EmployeeDTO;
@@ -27,7 +28,7 @@ import com.ataulfo.service.EmployeeService;
 @RequestMapping("/employee")
 public class EmployeeController 
 {
-	// Constructor Dependency injection,
+	// Dependency injection,
 	@Autowired
 	private EmployeeService employeeService;
 	
@@ -36,6 +37,7 @@ public class EmployeeController
 	
 	// 1. send data to the db,
 	@PostMapping("/insertEmployee")
+	@ResponseStatus(code = HttpStatus.FOUND)
 	public ResponseEntity<RequestDTO> insertEmployee(EmployeeDTO employeeDTO)
 	{
 		log.trace("For multiple environments");
