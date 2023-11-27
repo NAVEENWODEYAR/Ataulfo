@@ -11,6 +11,7 @@ public class AtaulfoApplication
 	{
 		SpringApplication.run(AtaulfoApplication.class, args);
 		System.out.println("\n  Ataúlfo is a mango cultivar from Mexico.,");
+//		starter class
 	}
 
 }
