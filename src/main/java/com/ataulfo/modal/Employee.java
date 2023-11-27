@@ -16,6 +16,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Entity
 @Table(name = "Emp_Table")
+
 public class Employee
 {
 	@Id
@@ -25,7 +26,7 @@ public class Employee
 	private String empMail;
 	private double empSalary;
 	private String empPhone;
-	
+//	model class
 	public Employee(EmployeeDTO employeeDTO)
 	{
 		this.empName = employeeDTO.getEmpName();
